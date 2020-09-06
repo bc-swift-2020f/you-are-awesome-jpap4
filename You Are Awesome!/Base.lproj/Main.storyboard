@@ -15,31 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZw-LN-fnh">
-                                <rect key="frame" x="16" y="20" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" red="0.54355955119999999" green="0.061665974560000003" blue="0.04095346481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7r-ho-CTc">
-                                <rect key="frame" x="135" y="128" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7r-ho-CTc">
+                                <rect key="frame" x="136" y="128" width="65" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zbw-L3-SFE"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMK-Bf-Wpq">
-                                <rect key="frame" x="16" y="166" width="343" height="481"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZw-LN-fnh">
+                                <rect key="frame" x="16" y="20" width="304" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="b47-7f-GsB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.54355955119999999" green="0.061665974560000003" blue="0.04095346481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMK-Bf-Wpq">
+                                <rect key="frame" x="16" y="166" width="304" height="481"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cMK-Bf-Wpq" secondAttribute="bottom" constant="20" id="Nru-iS-zmH"/>
+                            <constraint firstItem="VZw-LN-fnh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SbV-kH-qfc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cMK-Bf-Wpq" secondAttribute="trailing" constant="16" id="Tqs-IT-Xxt"/>
+                            <constraint firstItem="m7r-ho-CTc" firstAttribute="top" secondItem="VZw-LN-fnh" secondAttribute="bottom" constant="8" id="UHc-vH-8f7"/>
+                            <constraint firstItem="VZw-LN-fnh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZsF-L9-Agr"/>
+                            <constraint firstItem="cMK-Bf-Wpq" firstAttribute="top" secondItem="m7r-ho-CTc" secondAttribute="bottom" constant="8" id="hfB-K1-JZH"/>
+                            <constraint firstItem="m7r-ho-CTc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjD-B9-8ug"/>
+                            <constraint firstItem="cMK-Bf-Wpq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qDs-Y1-OUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZw-LN-fnh" secondAttribute="trailing" constant="16" id="sOK-cC-dD6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="cMK-Bf-Wpq" id="WN9-pg-z8p"/>
+                        <outlet property="imageView" destination="cMK-Bf-Wpq" id="GJC-79-vIP"/>
                         <outlet property="messageLabel" destination="VZw-LN-fnh" id="Oxd-tN-l48"/>
                     </connections>
                 </viewController>
