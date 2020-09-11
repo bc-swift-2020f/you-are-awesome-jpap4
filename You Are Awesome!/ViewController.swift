@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         var newMessage = messages[Int.random(in: 0...messages.count-1)]
         while messageLabel.text == newMessage {
-            print("*** we had a repeating value. Both newMessage and messageLabel.text = \(newMessage) and \(messageLabel.text!)")
+            print("*** We had a repeating value. Both newMessage and messageLabel.text = \(newMessage) and \(messageLabel.text!)")
             newMessage = messages[Int.random(in: 0...messages.count-1)]
         }
         messageLabel.text = newMessage
